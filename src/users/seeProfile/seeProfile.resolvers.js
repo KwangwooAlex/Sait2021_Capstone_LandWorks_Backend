@@ -7,6 +7,9 @@ export default {
         where: {
           username,
         },
+        // include: {
+        //   teams: true,
+        // },
       }),
   },
 };

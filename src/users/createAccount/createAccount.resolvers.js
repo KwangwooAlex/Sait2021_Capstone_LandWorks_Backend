@@ -5,7 +5,7 @@ export default {
   Mutation: {
     createAccount: async (
       _,
-      { firstName, lastName, username, email, password }
+      { username, email, companyName, phoneNumber, password }
     ) => {
       try {
         const existingUser = await client.user.findFirst({
@@ -25,15 +25,20 @@ export default {
         }
 
         const uglyPassword = await bcrypt.hash(password, 10);
-        await client.user.create({
-          data: {
-            username,
-            email,
-            firstName,
-            lastName,
-            password: uglyPassword,
-          },
-        });
+        try {
+          await client.user.create({
+            data: {
+              username,
+              email,
+              companyName,
+              phoneNumber,
+              password: uglyPassword,
+            },
+          });
+        } catch (e) {
+          console.log("Error", e);
+        }
+
         return {
           ok: true,
         };

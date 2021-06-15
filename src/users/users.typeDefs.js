@@ -7,6 +7,12 @@ export default gql`
     email: String!
     companyName: String!
     phoneNumber: String!
+    avatar: String
+    birth: String
+    country: String
+    state: String
+    city: String
+    Street: String
     team: [Team]
   }
 `;

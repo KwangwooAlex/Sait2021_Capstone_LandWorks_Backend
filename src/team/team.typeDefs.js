@@ -6,5 +6,15 @@ export default gql`
     teamName: String!
     teamMember: [User]
     project: [Project]
+    role: [Role]
+  }
+
+  type Role {
+    id: Int!
+    roleName: String!
+    teamId: Int!
+    userId: Int!
+    createdAt: String!
+    updatedAt: String!
   }
 `;

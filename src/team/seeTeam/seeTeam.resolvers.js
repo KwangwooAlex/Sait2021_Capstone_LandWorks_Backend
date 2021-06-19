@@ -10,6 +10,7 @@ export default {
         include: {
           teamMember: true,
           project: true,
+          role: true,
         },
       }),
   },

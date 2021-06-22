@@ -16,9 +16,9 @@ export default {
 
       //유저가 있다면 해쉬된 패스워드를 확인한다!
       // 지금 입력받는 비번과 월래 유저가 가지고 있는 비번을 확인한다!
-      console.log("passwordpassword", password);
-      console.log("process.env.SECRET_KEY", process.env.SECRET_KEY);
-      console.log("user.password", user.password);
+      // console.log("passwordpassword", password);
+      // console.log("process.env.SECRET_KEY", process.env.SECRET_KEY);
+      // console.log("user.password", user.password);
       const passwordOk = await bcrypt.compare(password, user.password);
       if (!passwordOk) {
         return {

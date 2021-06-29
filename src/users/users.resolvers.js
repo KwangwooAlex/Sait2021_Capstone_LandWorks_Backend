@@ -8,7 +8,7 @@ export default {
           where: { id },
         })
         .team({
-          include: { teamMember: true },
+          include: { teamMember: true, project: true, role: true },
         });
 
       // console.log("teamCheck", teamCheck);

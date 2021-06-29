@@ -16,3 +16,6 @@ Project
 
 - create Project
 - see Project
+
+npm i @paljs/plugins
+to cascade

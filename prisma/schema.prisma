@@ -46,9 +46,11 @@ model Team {
   id         Int       @id @default(autoincrement())
   teamMember User[]
   teamName   String    @unique
+  /// @onDelete(CASCADE)
   project    Project[]
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
+  /// @onDelete(CASCADE)
   role       Role[]
 }
 

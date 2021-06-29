@@ -4,7 +4,7 @@ import { protectedResolver } from "../../users/users.utils";
 
 export default {
   Mutation: {
-    createTeam: protectedResolver(async (_, { teamName }) => {
+    createTeam: protectedResolver(async (_, { teamName }, { loggedInUser }) => {
       try {
         const existingTeam = await client.team.findFirst({
           where: {
@@ -18,8 +18,14 @@ export default {
         await client.team.create({
           data: {
             teamName,
+            teamMember: {
+              connect: {
+                id: loggedInUser.id,
+              },
+            },
           },
         });
+
         return {
           ok: true,
         };

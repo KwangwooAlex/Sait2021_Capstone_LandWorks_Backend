@@ -4,6 +4,7 @@ export default gql`
   type Team {
     id: Int!
     teamName: String!
+    description: String
     teamMember: [User]
     project: [Project]
     role: [Role]

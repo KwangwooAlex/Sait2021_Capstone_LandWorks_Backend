@@ -9,6 +9,9 @@ export default gql`
       projectType: String!
       description: String!
       securityLevel: String!
+
+      startDate: String
+      endDate: String
     ): MutationResponse!
   }
 `;

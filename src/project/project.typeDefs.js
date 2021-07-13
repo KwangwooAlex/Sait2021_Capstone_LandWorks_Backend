@@ -9,6 +9,8 @@ export default gql`
     description: String!
     securityLevel: String!
     team: Team!
+    startDate: String
+    endDate: String
     createdAt: String!
     updatedAt: String!
   }

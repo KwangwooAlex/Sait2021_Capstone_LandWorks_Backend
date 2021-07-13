@@ -19,3 +19,5 @@ Project
 
 npm i @paljs/plugins
 to cascade
+
+/// @onDelete(CASCADE)

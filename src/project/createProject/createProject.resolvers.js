@@ -12,6 +12,8 @@ export default {
         projectType,
         description,
         securityLevel,
+        startDate,
+        endDate,
       }
     ) => {
       try {
@@ -32,6 +34,9 @@ export default {
               projectType,
               description,
               securityLevel,
+              startDate,
+              endDate,
+              // change the date format!!!
               team: {
                 connect: {
                   id: teamId,

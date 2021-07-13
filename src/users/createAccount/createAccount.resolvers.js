@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import client from "../../client";
+import md5 from "md5";
 
 export default {
   Mutation: {
@@ -25,6 +26,7 @@ export default {
         }
 
         const uglyPassword = await bcrypt.hash(password, 10);
+        const avatar = `http://gravatar.com/avatar/${md5(email)}?d=identicon`;
         try {
           await client.user.create({
             data: {
@@ -32,6 +34,7 @@ export default {
               email,
               companyName,
               phoneNumber,
+              avatar,
               password: uglyPassword,
             },
           });

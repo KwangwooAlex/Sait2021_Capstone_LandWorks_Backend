@@ -7,7 +7,19 @@ console.log(process.cwd());
 
 const resolverFn = async (
   _,
-  { username, email, companyName, phoneNumber, password: newPassword, avatar },
+  {
+    username,
+    email,
+    companyName,
+    phoneNumber,
+    password: newPassword,
+    avatar,
+    birth,
+    country,
+    state,
+    city,
+    Street,
+  },
   { loggedInUser }
 ) => {
   // const { id } = await jwt.verify(token, process.env.SECRET_KEY);
@@ -32,6 +44,11 @@ const resolverFn = async (
       email,
       companyName,
       phoneNumber,
+      birth,
+      country,
+      state,
+      city,
+      Street,
       ...(uglyPassword && { password: uglyPassword }),
       ...(avatar && { avatar: avatar }),
     },

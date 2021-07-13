@@ -36,6 +36,7 @@
     "graphql-tools": "^7.0.4",
     "graphql-upload": "^11.0.0",
     "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

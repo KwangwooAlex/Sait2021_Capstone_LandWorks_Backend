@@ -9,6 +9,11 @@ export default gql`
       phoneNumber: String
       password: String
       avatar: String
+      birth: String
+      country: String
+      state: String
+      city: String
+      Street: String
     ): MutationResponse!
   }
 `;

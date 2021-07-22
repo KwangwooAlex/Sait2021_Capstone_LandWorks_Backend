@@ -8,7 +8,7 @@ export default gql`
       companyName: String
       phoneNumber: String
       password: String
-      avatar: String
+      avatar: Upload
       birth: String
       country: String
       state: String

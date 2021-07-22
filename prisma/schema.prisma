@@ -18,7 +18,7 @@ model User {
   phoneNumber String
   password    String
   avatar      String?
-  birth       DateTime?
+  birth       String?
   country     String?
   state       String?
   city        String?

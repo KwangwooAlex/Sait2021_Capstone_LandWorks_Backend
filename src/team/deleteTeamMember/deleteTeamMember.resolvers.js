@@ -52,13 +52,14 @@ export default {
               ],
             },
           });
-          // console.log("findRole", findRole);
-
-          await client.role.delete({
-            where: {
-              id: findRole.id,
-            },
-          });
+          console.log("findRole", findRole);
+          if (findRole !== null) {
+            await client.role.delete({
+              where: {
+                id: findRole.id,
+              },
+            });
+          }
         }
 
         // console.log("teamMember", teamMember);

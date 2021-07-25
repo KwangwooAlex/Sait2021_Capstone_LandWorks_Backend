@@ -13,7 +13,7 @@ const apollo = new ApolloServer({
   resolvers,
   typeDefs,
   playground: true,
-  // introspection: true,
+  introspection: true,
   uploads: false,
 
   context: async (ctx) => {

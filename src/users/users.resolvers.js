@@ -11,7 +11,7 @@ export default {
           include: { teamMember: true, project: true, role: true },
         });
 
-      // console. log("teamCheck", teamCheck);
+      // console. log("teamCheck",   teamCheck);
       return teamCheck;
     },
   },

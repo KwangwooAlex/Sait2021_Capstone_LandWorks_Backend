@@ -39,7 +39,10 @@ export default {
             },
           });
         } catch (e) {
-          console.log("Error", e);
+          return {
+            ok: false,
+            error: e,
+          };
         }
 
         return {
@@ -48,7 +51,7 @@ export default {
       } catch (e) {
         return {
           ok: false,
-          error: "Cant create account.",
+          error: "This username/email is already taken.",
         };
       }
     },

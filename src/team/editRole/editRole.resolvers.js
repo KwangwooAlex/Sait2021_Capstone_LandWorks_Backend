@@ -57,6 +57,19 @@ export default {
           ],
         },
       });
+      if (findRole == null) {
+        console.log("롤없음");
+        await client.role.create({
+          data: {
+            roleName,
+            teamId,
+            userId,
+          },
+        });
+        return {
+          ok: true,
+        };
+      }
 
       // console.log("findRole", findRole);
 

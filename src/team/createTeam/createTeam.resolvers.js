@@ -16,7 +16,7 @@ export default {
             throw new Error("This team name is already taken.");
           }
 
-          await client.team.create({
+          const newTeam = await client.team.create({
             data: {
               teamName,
               description,
@@ -28,8 +28,11 @@ export default {
             },
           });
 
+          console.log("newTeam", newTeam);
           return {
             ok: true,
+            id: newTeam.id,
+            user: loggedInUser,
           };
         } catch (e) {
           return {
